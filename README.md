@@ -26,7 +26,7 @@ Website ini adalah showcase digital dari profil profesional saya sebagai **Softw
 - Call-to-action buttons untuk proyek dan kontak
 
 ### 2. **Skills Section**
-- Organisasi keahlian dalam 5 kategori utama
+- Organisasi keahlian dalam 6 kategori utama
 - Penampilan grid yang responsif
 - Teknologi: Bahasa Pemrograman, Framework, Database, Tools, Soft Skills
 
