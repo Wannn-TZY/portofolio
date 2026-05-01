@@ -10,6 +10,7 @@ const projectData = [
     details:
       'PerpusLite adalah sistem perpustakaan digital berbasis Laravel dengan fitur dashboard admin, manajemen buku dan pengguna, manajemen peminjaman, serta pelaporan status peminjaman. Memanfaatkan MySQL, Supabase, dan Meilisearch untuk pencarian cepat dan sinkronisasi data yang handal.',
     tags: ['Laravel', 'MySQL', 'Supabase', 'Meilisearch'],
+    githubUrl: 'https://github.com/Wannn-TZY/perpustakaan-backend',
     stats: [
       { id: 'users', label: 'Total Users', value: '7', tone: 'blue' },
       { id: 'books', label: 'Total Books', value: '2', tone: 'purple' },
@@ -27,6 +28,7 @@ const projectData = [
     details:
       'Projek Web OSIS ini dibangun dengan Laravel dan Filament sebagai library utama untuk admin panel. Fitur meliputi manajemen periode kepengurusan, departemen aktif, anggota, program kerja, dan konten landing page dengan penyajian data yang responsif dan mudah dikembangkan.',
     tags: ['Laravel', 'Filament', 'PHP', 'Backend'],
+    githubUrl: 'https://github.com/osis-smkn1cibinong/osis-web-api',
     stats: [
       { id: 'period', label: 'Periode Aktif', value: '2025/2026', tone: 'blue' },
       { id: 'departments', label: 'Jumlah Sekbid', value: '13', tone: 'purple' },
@@ -454,9 +456,11 @@ function App() {
               ))}
             </div>
             <div className="modal-actions">
-              <a className="btn btn-primary" href="mailto:sulaimane627@gmail.com">
-                Kontak Saya
-              </a>
+              {activeProject.githubUrl && (
+                <a className="btn btn-primary" href={activeProject.githubUrl} target="_blank" rel="noopener noreferrer">
+                  Lihat Repository
+                </a>
+              )}
               <button type="button" className="btn btn-ghost" onClick={closeProject}>
                 Tutup
               </button>
