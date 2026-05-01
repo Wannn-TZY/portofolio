@@ -38,6 +38,49 @@ const projectData = [
   },
 ]
 
+const certificationsData = [
+  {
+    id: 'cert-1',
+    title: 'Python Data Science',
+    issuer: 'DigiUp',
+    description: 'Sertifikasi pelatihan Python Data Science yang mencakup dasar-dasar pengolahan data menggunakan bahasa pemrograman Python.',
+    file: '/Sertifikan Python Data Science by DigiUp.pdf',
+    type: 'pdf'
+  },
+  {
+    id: 'cert-2',
+    title: 'Python for Beginner 1',
+    issuer: 'DQLab',
+    description: 'Sertifikat penyelesaian kursus Python tingkat dasar yang mempelajari sintaks dan algoritma pemrograman.',
+    file: '/Sertifikan Pyton for Beginner 1.pdf',
+    type: 'pdf'
+  },
+  {
+    id: 'cert-3',
+    title: 'Digital Talent Scholarship 2024',
+    issuer: 'Kominfo',
+    description: 'Sertifikat kelulusan program Digital Talent Scholarship 2024 untuk peningkatan keterampilan digital.',
+    file: '/Sertifikat Pelatihan Digital Talent Scholarship 2024.pdf',
+    type: 'pdf'
+  },
+  {
+    id: 'cert-4',
+    title: 'Pembuatan Game',
+    issuer: 'Dicoding',
+    description: 'Sertifikat keahlian dalam perancangan dan pengembangan permainan (game development).',
+    file: '/Sertifikat Pembuatan Game.png',
+    type: 'image'
+  },
+  {
+    id: 'cert-5',
+    title: 'Pengenalan Pembelajaran Python',
+    issuer: 'DQLab',
+    description: 'Sertifikat penyelesaian modul pengenalan bahasa pemrograman Python.',
+    file: '/Sertifikat Pengenalan pembelajaran Python dari DQLab.pdf',
+    type: 'pdf'
+  }
+]
+
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [activeProject, setActiveProject] = useState(null)
@@ -120,6 +163,7 @@ function App() {
           <a href="#projects">Proyek</a>
           <a href="#skills">Keahlian</a>
           <a href="#experience">Pengalaman</a>
+          <a href="#certifications">Sertifikasi</a>
           <a href="#contact">Kontak</a>
         </nav>
         <button 
@@ -317,6 +361,47 @@ function App() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="certifications" className="section-block reveal">
+          <div className="section-heading">
+            <span className="section-line"></span>
+            <h2>Sertifikasi & Penghargaan</h2>
+          </div>
+          <div className="cert-grid">
+            {certificationsData.map(cert => (
+              <a 
+                key={cert.id} 
+                href={cert.file} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="cert-card"
+              >
+                <div className="cert-icon">
+                  {cert.type === 'pdf' ? (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  ) : (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                  )}
+                </div>
+                <div className="cert-info">
+                  <h3>{cert.title}</h3>
+                  <span className="cert-issuer">{cert.issuer}</span>
+                  <p>{cert.description}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </section>
 
