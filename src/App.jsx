@@ -66,7 +66,7 @@ const certificationsData = [
   {
     id: 'cert-4',
     title: 'Pembuatan Game',
-    issuer: 'Dicoding',
+    issuer: 'Clevio',
     description: 'Sertifikat keahlian dalam perancangan dan pengembangan permainan (game development).',
     file: '/Sertifikat Pembuatan Game.png',
     type: 'image'
