@@ -179,7 +179,7 @@ function App() {
             </div>
             <div className="skill-panel">
               <h3>Framework & Library</h3>
-              <p>Laravel, React.js, Tailwind CSS, Bootstrap, Alpine.js.</p>
+              <p>Laravel, React.js, Vite.js, Tailwind CSS, Bootstrap, Alpine.js.</p>
             </div>
             <div className="skill-panel">
               <h3>Database & Cloud</h3>
