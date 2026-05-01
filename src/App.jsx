@@ -347,8 +347,6 @@ function App() {
         <div className="footer-links">
           <a href="https://github.com/Wannn-TZY" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#skills">LinkedIn</a>
-          <a href="#experience">Dokumentasi</a>
-          <a href="#contact">Email</a>
         </div>
       </footer>
 
