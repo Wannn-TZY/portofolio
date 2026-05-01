@@ -38,6 +38,52 @@ const projectData = [
   },
 ]
 
+const languageLogos = [
+  {
+    id: 'php',
+    name: 'PHP',
+    color: '#7479c5',
+    label: 'PHP',
+  },
+  {
+    id: 'js',
+    name: 'JavaScript',
+    color: '#f7df1e',
+    label: 'JS',
+    textColor: '#111',
+  },
+  {
+    id: 'python',
+    name: 'Python',
+    color: '#3776ab',
+    label: 'Py',
+  },
+  {
+    id: 'csharp',
+    name: 'C#',
+    color: '#239120',
+    label: 'C#',
+  },
+  {
+    id: 'html',
+    name: 'HTML5',
+    color: '#e34f26',
+    label: 'HTML',
+  },
+  {
+    id: 'css',
+    name: 'CSS3',
+    color: '#264de4',
+    label: 'CSS',
+  },
+  {
+    id: 'sql',
+    name: 'SQL',
+    color: '#00618a',
+    label: 'SQL',
+  },
+]
+
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [activeProject, setActiveProject] = useState(null)
@@ -175,7 +221,16 @@ function App() {
           <div className="skills-group">
             <div className="skill-panel">
               <h3>Bahasa Pemrograman</h3>
-              <p>PHP, JavaScript, Python, C#, HTML5, CSS3, SQL.</p>
+              <div className="logo-grid">
+                {languageLogos.map(lang => (
+                  <div key={lang.id} className="logo-card">
+                    <div className="logo-icon" style={{ background: lang.color }}>
+                      <span style={{ color: lang.textColor || '#fff' }}>{lang.label}</span>
+                    </div>
+                    <span>{lang.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="skill-panel">
               <h3>Framework & Library</h3>
